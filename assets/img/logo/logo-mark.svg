@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="40" y1="200" x2="160" y2="20">
+      <stop offset="0%" stop-color="#c97a0e"/>
+      <stop offset="50%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#ffd27a"/>
+    </linearGradient>
+    <linearGradient id="navy" gradientUnits="userSpaceOnUse" x1="100" y1="20" x2="100" y2="210">
+      <stop offset="0%" stop-color="#1b3a5c"/>
+      <stop offset="100%" stop-color="#0f2138"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shield -->
+  <path d="M55,30 Q40,30 40,45 L40,115 C40,165 65,195 100,212 C135,195 160,165 160,115 L160,45 Q160,30 145,30 Z"
+        fill="#ffffff" stroke="url(#navy)" stroke-width="6"/>
+  <path d="M55,38 Q48,38 48,45 L48,115 C48,159 68,186 100,202 C132,186 152,159 152,115 L152,45 Q152,38 145,38 Z"
+        fill="none" stroke="url(#gold)" stroke-width="1.4" opacity="0.8"/>
+
+  <!-- ground -->
+  <line x1="50" y1="178" x2="150" y2="178" stroke="url(#navy)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- house -->
+  <rect x="55" y="148" width="32" height="30" fill="url(#navy)"/>
+  <path d="M50,148 L97,148 L71,124 Z" fill="url(#navy)"/>
+  <rect x="68" y="160" width="10" height="18" fill="#ffffff"/>
+
+  <!-- building -->
+  <rect x="98" y="90" width="34" height="88" fill="url(#navy)"/>
+  <g fill="#ffffff">
+    <rect x="104" y="100" width="8" height="10"/>
+    <rect x="120" y="100" width="8" height="10"/>
+    <rect x="104" y="120" width="8" height="10"/>
+    <rect x="120" y="120" width="8" height="10"/>
+    <rect x="104" y="140" width="8" height="10"/>
+    <rect x="120" y="140" width="8" height="10"/>
+  </g>
+
+  <!-- crane -->
+  <line x1="142" y1="178" x2="142" y2="48" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="62" y1="48" x2="155" y2="48" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="142" y1="48" x2="142" y2="33" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M142,33 L65,48 M142,33 L155,48" fill="none" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="95" y1="48" x2="95" y2="95" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+  <rect x="86" y="95" width="18" height="14" rx="2" fill="url(#gold)"/>
+</svg>
