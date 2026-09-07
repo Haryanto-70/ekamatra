@@ -59,10 +59,7 @@ header.main-header{
 }
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy);}
-.logo .logo-badge{
-  width:42px;height:42px;border-radius:8px;background:var(--orange);color:var(--navy);
-  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;
-}
+.logo .logo-mark{width:46px;height:46px;flex:none;}
 .logo small{display:block;font-weight:600;font-size:11px;color:var(--gray);letter-spacing:.5px;}
 nav.main-nav ul{display:flex;gap:30px;align-items:center;}
 nav.main-nav a{font-weight:600;font-size:15px;color:var(--dark);position:relative;padding:6px 0;}
@@ -234,6 +231,7 @@ footer{background:var(--dark);color:#c8ccd2;padding:64px 0 0;}
 .footer-grid ul a{font-size:14px;color:#9ba1aa;}
 .footer-grid ul a:hover{color:var(--orange);}
 .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px;font-weight:800;font-size:19px;color:#fff;}
+.footer-logo img{width:44px;height:44px;flex:none;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;text-align:center;font-size:13px;color:#7d838c;}
 .social-row{display:flex;gap:10px;margin-top:16px;}
 .social-row a{
