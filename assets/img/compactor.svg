@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#eef2f5"/>
+  <rect x="0" y="230" width="400" height="70" fill="#dfe5ea"/>
+  <rect x="0" y="225" width="400" height="6" fill="#c7cfd6"/>
+  <g>
+    <rect x="150" y="150" width="120" height="60" rx="8" fill="#f5a623"/>
+    <rect x="150" y="150" width="120" height="16" fill="#dd8f14"/>
+    <rect x="190" y="110" width="12" height="45" fill="#3a3f47"/>
+    <rect x="150" y="100" width="60" height="16" rx="4" fill="#3a3f47"/>
+    <rect x="130" y="205" width="160" height="35" rx="17" fill="#22262c"/>
+    <ellipse cx="210" cy="240" rx="90" ry="10" fill="#5b6169"/>
+  </g>
+  <text x="200" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5b6169">Road Roller</text>
+</svg>

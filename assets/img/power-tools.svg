@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#eef2f5"/>
+  <rect x="0" y="230" width="400" height="70" fill="#dfe5ea"/>
+  <rect x="0" y="225" width="400" height="6" fill="#c7cfd6"/>
+  <g>
+    <rect x="110" y="150" width="120" height="34" rx="10" fill="#f5a623"/>
+    <rect x="200" y="130" width="16" height="30" fill="#3a3f47"/>
+    <rect x="205" y="115" width="6" height="20" fill="#5b6169"/>
+    <rect x="100" y="176" width="34" height="20" rx="6" fill="#dd8f14"/>
+    <rect x="250" y="170" width="16" height="70" fill="#3a3f47"/>
+    <rect x="235" y="165" width="46" height="16" rx="4" fill="#f5a623"/>
+    <circle cx="258" cy="245" r="10" fill="#22262c"/>
+  </g>
+  <text x="200" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5b6169">Power Tools</text>
+</svg>
