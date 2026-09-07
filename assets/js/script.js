@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var text = 'Halo PT Ekamatra Mandiri Sejahtera, saya ' + nama +
         ' ingin bertanya/menyewa alat: ' + alat +
         (pesan ? ('. Catatan: ' + pesan) : '');
-      var url = 'https://wa.me/6281734234?text=' + encodeURIComponent(text);
+      var url = 'https://wa.me/6282113496520?text=' + encodeURIComponent(text);
       window.open(url, '_blank');
     });
   }
