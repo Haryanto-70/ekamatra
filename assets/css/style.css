@@ -76,7 +76,7 @@ nav.main-nav a:hover{color:var(--orange-dark);}
   position:relative;color:#fff;min-height:640px;display:flex;align-items:center;
   background-size:cover;background-position:center;overflow:hidden;
 }
-.hero-bg{position:absolute;inset:0;background:url('../img/hero-construction.svg') center/cover no-repeat;}
+.hero-bg{position:absolute;inset:0;background:url('../img/photos/hero-proyek.jpg') center/cover no-repeat;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg, rgba(15,33,56,.92) 0%, rgba(15,33,56,.65) 55%, rgba(15,33,56,.25) 100%);}
 .hero .container{position:relative;z-index:2;}
 .hero-content{max-width:640px;}
@@ -98,6 +98,17 @@ nav.main-nav a:hover{color:var(--orange-dark);}
 .category-strip .container{display:flex;justify-content:space-between;flex-wrap:wrap;padding:22px 24px;gap:18px;}
 .category-strip .item{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);font-size:14px;}
 .category-strip .item .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
+
+/* Fleet banner */
+.fleet-banner{background:#fff;padding:36px 0;}
+.fleet-banner-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.fleet-banner figure{
+  margin:0;background:var(--gray-light);border:1px solid var(--border);border-radius:var(--radius);
+  padding:18px;text-align:center;
+}
+.fleet-banner img{max-height:120px;margin:0 auto 10px;object-fit:contain;}
+.fleet-banner figcaption{font-size:13px;font-weight:700;color:var(--navy-2);}
+@media(max-width:760px){.fleet-banner-grid{grid-template-columns:1fr;}}
 
 /* About */
 .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;}
