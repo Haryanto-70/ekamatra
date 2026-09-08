@@ -426,3 +426,187 @@ h2 { font-size: 32px; }
   .process-grid { grid-template-columns: 1fr; }
   .hero-inner { padding-top: 70px; }
 }
+
+/* ============================================================ */
+/* ===== Interactive animation layer ===== */
+/* ============================================================ */
+
+/* Hero entrance */
+.hero-anim {
+  opacity: 0;
+  transform: translateY(26px);
+  animation: heroIn .9s cubic-bezier(.16,.84,.44,1) forwards;
+  animation-delay: var(--d, 0s);
+}
+@keyframes heroIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1);
+  will-change: opacity, transform;
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-left { transform: translateX(-46px); }
+.reveal-left.in-view { transform: translateX(0); }
+.reveal-right { transform: translateX(46px); }
+.reveal-right.in-view { transform: translateX(0); }
+.reveal-scale { transform: scale(.9); }
+.reveal-scale.in-view { transform: scale(1); }
+
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .6s cubic-bezier(.16,.84,.44,1), transform .6s cubic-bezier(.16,.84,.44,1);
+}
+.reveal-group.in-view > * { opacity: 1; transform: translateY(0); }
+.reveal-group > *:nth-child(1) { transition-delay: .04s; }
+.reveal-group > *:nth-child(2) { transition-delay: .11s; }
+.reveal-group > *:nth-child(3) { transition-delay: .18s; }
+.reveal-group > *:nth-child(4) { transition-delay: .25s; }
+.reveal-group > *:nth-child(5) { transition-delay: .32s; }
+.reveal-group > *:nth-child(6) { transition-delay: .39s; }
+.reveal-group > *:nth-child(7) { transition-delay: .46s; }
+.reveal-group > *:nth-child(8) { transition-delay: .53s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim, .reveal, .reveal-group > * {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Gallery hover zoom */
+.img-zoom img,
+.img-zoom picture img {
+  transition: transform .55s cubic-bezier(.16,.84,.44,1), box-shadow .3s ease;
+  position: relative;
+}
+.img-zoom img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 18px 34px rgba(8,21,34,.28);
+  z-index: 2;
+}
+.discipline-gallery.img-zoom img:hover { z-index: 2; }
+
+/* Tilt-on-hover cards (JS sets --rx/--ry/--tz via inline style) */
+.tilt-card {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(var(--tz, 0px));
+  transition: transform .35s cubic-bezier(.16,.84,.44,1), box-shadow .35s ease, border-color .35s ease;
+}
+.tilt-card:hover {
+  box-shadow: 0 20px 40px rgba(8,21,34,.18);
+}
+.section-dark .tilt-card:hover,
+.discipline .tilt-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+  border-color: rgba(211,163,76,.4);
+}
+
+/* Button shine sweep */
+.btn { position: relative; overflow: hidden; }
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+.btn:hover::before { left: 130%; }
+
+/* Stat pop */
+.stat { transition: transform .3s ease; }
+.stat:hover { transform: translateY(-4px); }
+.stat-num { transition: color .3s ease, transform .3s ease; }
+.stat:hover .stat-num { color: #fff; transform: scale(1.08); }
+
+/* Nav scroll-spy active state */
+.main-nav a { position: relative; }
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width .3s ease;
+}
+.main-nav a:hover::after,
+.main-nav a.active::after { width: 100%; }
+.main-nav a.active { color: var(--gold); opacity: 1; }
+.main-nav a.nav-cta::after { display: none; }
+
+/* Scroll cue click affordance */
+.scroll-cue { cursor: pointer; }
+
+/* Floating WhatsApp button */
+.whatsapp-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 88px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(37,211,102,.4);
+  z-index: 200;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.whatsapp-fab:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 34px rgba(37,211,102,.5);
+}
+.whatsapp-fab-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  animation: wa-ping 2.4s cubic-bezier(0,0,.2,1) infinite;
+}
+@keyframes wa-ping {
+  0% { transform: scale(1); opacity: .6; }
+  80% { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-fab-ring { animation: none; }
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .3s ease, transform .3s ease, visibility .3s, background .25s ease;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: var(--gold); color: var(--navy-950); }
+
+@media (max-width: 560px) {
+  .whatsapp-fab { width: 50px; height: 50px; right: 16px; bottom: 78px; }
+  .back-to-top { width: 40px; height: 40px; right: 16px; bottom: 20px; }
+}
