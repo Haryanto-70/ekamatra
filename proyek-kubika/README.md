@@ -2,6 +2,12 @@
 
 Website company profile untuk **PT Kubika Karya Indonesia**, kontraktor Design & Build Residential yang didukung keahlian Mekanikal, Elektrikal & Plumbing (MEP).
 
+## Lokasi Repository
+
+- **GitHub**: [Haryanto-70/ekamatra](https://github.com/Haryanto-70/ekamatra)
+- **Branch**: `claude/kubika-website-build-rh5obr`
+- **Folder proyek**: [`proyek-kubika/`](https://github.com/Haryanto-70/ekamatra/tree/claude/kubika-website-build-rh5obr/proyek-kubika)
+
 ## Struktur
 
 ```
